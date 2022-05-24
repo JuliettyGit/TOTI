@@ -10,11 +10,11 @@ def lemmatization_with_nltk(text_to_analise):
     lems = []
     for word in tokenization_with_nltk(text_to_analise):
         lems.append(lemmatizer.lemmatize(word))
-    print("Lems from NLTK: ", lems)
+    return "Lems from NLTK: ", lems
 
 
 def lemmatization_with_pymorphy(text_to_analise):
     lems = []
     for word in tokenization_with_pymorphy(text_to_analise):
         lems.append(morph.parse(word)[0].normal_form)
-    print("Lems from pymorphy: ", lems)
+    return "Lems from pymorphy: ", lems
